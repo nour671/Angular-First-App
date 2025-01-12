@@ -1,0 +1,48 @@
+<section class="contact">
+  <div class="content d-flex flex-column align-items-center  ">
+
+    <div class="title">
+
+      <h2 class=" text-uppercase mt-4 mb-3">contact component</h2>
+
+      <div  class="d-flex align-items-center justify-content-center mb-3">
+        <div  class="line me-3 " ></div>
+        <i  class="fa-solid fa-star "></i>
+        <div  class="line ms-3 " ></div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <form action="" class=" form position-relative w-50 p-3 mx-auto mt-5 mb-3">
+    <div >
+      <label [class.top]="userName" for="userName" class="position-relative label"> userName:</label>
+      <input class="form-control border-0 border-bottom  position-relative"  type="text" name="userName" id="userName" placeholder="userName" [(ngModel)]="userName" >
+    </div>
+    <br>
+    <div>
+      <label [class.top]="userAge" for="userAge" class="position-relative label"> userAge:</label>
+      <input class="form-control border-0 border-bottom  position-relative"  type="number" name="userAge" id="userAge" placeholder="userAge" [(ngModel)]="userAge">
+    </div>
+    <br>
+    <div>
+      <label [class.top]="userEmail" for="userEmail" class="position-relative label"> userEmail:</label>
+      <input class="form-control border-0 border-bottom  position-relative" type="email" name="userEmail" id="userEmail" placeholder="userEmail"  [(ngModel)]="userEmail" >
+    </div>
+    <br>
+    <div>
+      <label [class.top]="userPassword" for="userPassword" class="position-relative label"> userPassword:</label>
+      <input  class="form-control border-0 border-bottom  position-relative" type="password" name="userPassword"  id="userPassword" placeholder="userPassword"   [(ngModel)]="userPassword">
+    </div><br>
+
+    <button  class="btn mt-4 mb-3 text-white" > send Message </button>
+  </form>
+
+
+
+
+
+
+</section>

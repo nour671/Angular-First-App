@@ -1,0 +1,47 @@
+<section class="portfolio ">
+  <div class="content d-flex flex-column align-items-center  ">
+
+    <div class="title">
+
+      <h2 class=" text-uppercase mt-4 mb-3">portfolio component</h2>
+
+      <div  class="d-flex align-items-center justify-content-center mb-3">
+        <div  class="line me-3" ></div>
+        <i  class="fa-solid fa-star "></i>
+        <div  class="line ms-3" ></div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div  class="container pb-5">
+    <div  class="row g-5">
+      @for (portfolio of portfolioList; track portfolio.id) {
+        <div  class="col-lg-4 col-md-6">
+          <div (click)="showModel(portfolio.src)"  class=" box rounded-3 overflow-hidden position-relative">
+            <img  alt="Portfolio Image" class="w-100 rounded-3" [src]=" portfolio.src ">
+            <div  class="layer position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
+              <i  class="text-white fa-solid fa-plus fa-6x"></i>
+            </div>
+          </div>
+        </div>
+
+        <div [class.d-none]="!isModalOpen"  id="model" class="model z-1  position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center">
+          <img alt="Modal Image" class="w-50 " [src]="modelSrc">
+          <!-- <i (click)="closeModal()" class=" close fa-solid fa-xmark fs-4 top-100" id="close"></i> -->
+          <button (click)="closeModal()" type="button" class="close btn" >
+            <span >×</span>
+          </button>
+        </div>
+
+      }
+
+
+    </div>
+  </div>
+
+
+
+</section>

@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1abc9c;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio {
+  /* margin-top: 86px;  */
+  min-height: calc(-106px + 100vh);
+  /* min-height: inherit; */
+  background-color: #fff;
+}
+.portfolio .container-fluid {
+}
+.portfolio .container-fluid .content {
+  text-align: left;
+}
+
+.portfolio h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 48px;
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.portfolio .title .line {
+  background-color: #2c3e50;
+  width: 80px;
+  height: 4px;
+}
+.portfolio .title i {
+  color: #2c3e50;
+
+}
+
+.portfolio .container .layer {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  cursor: pointer;
+  transition: .6s opacity;
+
+}
+.portfolio .container .box:hover .layer {
+  opacity: 0.9 !important;
+  background-color: #1abc9c !important;
+}
+.portfolio .model {
+  z-index: 1;
+}
+.portfolio .model .close {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  right: 70px;
+  top: 50px;
+  z-index: 10;
+  border: none;
+
+}
+
+.portfolio .model .close:hover {
+  cursor: pointer;
+}
+
